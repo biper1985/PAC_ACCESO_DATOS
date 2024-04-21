@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 5.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-5.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la conexión a la base de datos -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/acceso_datos</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">12345</property>
+
+        <!-- Otras configuraciones -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Mapeo de clases de entidad -->
+        <mapping class="org.example.Libro"/>
+        <mapping class="org.example.Lector"/>
+        <mapping class="org.example.Prestamo"/>
+
+        <!-- Aquí puedes agregar el mapeo de tus clases de entidad -->
+    </session-factory>
+</hibernate-configuration>
